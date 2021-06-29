@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <form action='/predict1' method="post" class="col s12">
+     
+            <label for="first_name"><b>Number of bedroom</b></label>
+            <br>
+          <input placeholder="enter no of bedrooms" name="bedrooms" id="first_name" type="text" class="validate">
+  
+
+          <label for="last_name"><b>Number of bathroom</b></label>
+        
+          <input id="last_name" name="bathrooms" placeholder="No of bedrooms"  type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="_name"><b>floors</b></label>
+            <br>
+          <input id="_name" name="floors" placeholder="on which floor" type="text" class="validate">
+
+        </div>
+         <div class="input-field col s4">
+            <label for="_name"><b>sqft living</b></label>
+            <br>
+          <input id="_name" name="sqft living" placeholder="sq fit" type="text" class="validate">
+
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+     
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_ }}
+
+ </div>
+
+
+</body>
+</html>
